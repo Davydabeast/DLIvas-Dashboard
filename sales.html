@@ -10,9 +10,9 @@
     <div id="container">
         <div class='sidebar'>
             <ul id='nav'>
-                <li><a class='selected' href="#">Dashboard</a></li>
+                <li><a href="index.html">Dashboard</a></li>
                 <li><a href="#">Search</a></li>
-                <li><a href="sales.html">Sales</a></li>
+                <li><a class="selected" href="sales.html">Sales</a></li>
                 <li><a href="#">Expense Report </a></li>
                 <li><a href="#">Friends</a></li>
                 <li><a href="#">Site Analytics</a></li>
@@ -24,7 +24,7 @@
             
             <div id='box'>
                 <div class='box-top'>News</div>
-                <div class='box-panel'>This is where the news will come in
+                <div class='box-panel'>Sales in the past 6 months
                     <canvas id="myChart" width="400" height="400"></canvas>
                     
                 </div>
@@ -38,7 +38,7 @@
     <script>
 var ctx = document.getElementById("myChart");
 var myChart = new Chart(ctx, {
-    type: 'line',
+    type: 'bar',
     data: {
         labels: ["January", "February", "March", "April", "May", "June"],
         datasets: [{
