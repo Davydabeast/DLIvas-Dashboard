@@ -1,0 +1,78 @@
+<html>
+<head>
+<title>ADMIN</title>
+<link rel="stylesheet" type="text/css" href= "css/main.css" />
+    </head>
+<body>
+	<div id='header'>
+		<div class='logo'><a href="#">Xero<span>Source</span></a></div>
+	</div>
+    <div id="container">
+        <div class='sidebar'>
+            <ul id='nav'>
+                <li><a class='selected' href="#">Dashboard</a></li>
+                <li><a href="#">Search</a></li>
+                <li><a href="sales.html">Sales</a></li>
+                <li><a href="#">Expense Report </a></li>
+                <li><a href="#">Friends</a></li>
+                <li><a href="#">Site Analytics</a></li>
+            </ul>
+        </div>
+        <div class='content'>
+            <h1>Dash<span>Board</span></h1>
+            <p>Here You can do Stuff</p>
+            
+            <div id='box'>
+                <div class='box-top'>News</div>
+                <div class='box-panel'>This is where the news will come in
+                    <canvas id="myChart" width="400" height="400"></canvas>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+    </div>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.2.1/Chart.bundle.min.js">
+</script>
+    <script>
+var ctx = document.getElementById("myChart");
+var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: ["January", "February", "March", "April", "May", "June"],
+        datasets: [{
+            label: 'Sales in USD Per Month',
+            data: [50000, 25000, 30000, 27000, 20000, 32000],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255,99,132,1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero:true
+                }
+            }]
+        }
+    }
+});
+</script>
+</body>
+</html>

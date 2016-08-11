@@ -1,5 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito:400,300,700);
-
 * {
 	margin: 0;
 	padding: 0;
@@ -37,7 +36,8 @@ div#container{
     margin: 0 auto;
 }
 .sidebar{
-    width:250px;
+    width:27%;
+    max-width: 250px;
     height:calc(100% - 50px);
     background-color: #16a085;
     float: left;
@@ -72,8 +72,8 @@ ul#nav li a.selected{
 }
 
 .content{
-    width: auto;
-    margin-left: 250px;
+    width:73% ;
+    margin-left: 27%;
     height: calc(100% - 50px);
     background-color: #bdc3c7;
     padding: 15px;
@@ -92,9 +92,11 @@ div#box .box-top {
     color: #fff;
     text-shadow: 0px 0px 1px #ddd;
     background-color: 2980b9;
+    max-height: auto;
         
 }
 div#box .box-panel {
     padding: 15px;
-    background-color: #fff 
+    background-color: #fff;
+    max-height: inherit;
 }
